@@ -1,4 +1,4 @@
-﻿/**
+/**
  * объявление пакета
  */
 package kr.KR;
@@ -29,7 +29,7 @@ public class ComponentForm extends JFrame {
 	static JLabel label_1;
 	static JLabel label_2;
 	static JLabel label_3;
-	static JTextField TxtBox1; 
+	static JTextField TxtBox1;
 	static JTextField TxtBox2;
 	public static JFrame frame;
 	static JButton btnNewButton;
@@ -63,7 +63,7 @@ public class ComponentForm extends JFrame {
 		btnNewButton=new JButton("Расчитать");
 		btnNewButton.setFont(font);
 		Panel1 = new JPanel();
-		/**
+                /**
 		 * Добавляем кнопку, текстовые поля и метки на панель
 		 */
 		Panel1.add(label_1);
@@ -92,33 +92,5 @@ public class ComponentForm extends JFrame {
 		 */
 		frame.setResizable(false);
 		/**
-		 * Обработчик событий для TxtBox1(поле для ввода максимальной мощности)
-		 */
-		TxtBox1.addKeyListener(new KeyAdapter() {
-			   public void keyTyped(KeyEvent e) {
-			      char c = e.getKeyChar();
-			      /**
-					 * обработка исключений
-					 */
-					try {
-						/**
-						 * Обработка 1го введенного символа , ограничение на длину строки
-						 * matches-поиск совпадений по заданному шаблону
-						 */
-						if(!TxtBox1.getText().matches("[0-9]{0,4}") && (c != KeyEvent.VK_BACK_SPACE))  throw new Exception("Нельзя вводить больше 5 символов");
-						if(TxtBox1.getText().matches("")&& (c=='0') && (c != KeyEvent.VK_BACK_SPACE)) throw new Exception("Выражение не должно начинатся с нуля");
-						if ( ((c < '0') || (c > '9')) && (c != KeyEvent.VK_BACK_SPACE)) throw new Exception("Можно вводить только цифры от 0 до 9");
-					} 
-					catch (Exception e1) {
-						e.consume();
-						JOptionPane.showMessageDialog(new JFrame(),e1.getMessage(), "ОШИБКА",JOptionPane.ERROR_MESSAGE);
-					}
-			   }
-			}) ;
-		/**
-		 * Вызываем обработчик событий из класса MathForm
-		 */
-		MathForm calcEngine = new MathForm(this);
-	    btnNewButton.addActionListener(calcEngine);
-	}
-}
+		 * Добавляем иконку
+		 */ 

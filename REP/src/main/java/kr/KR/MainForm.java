@@ -1,4 +1,4 @@
-﻿/**
+/**
  * объявление пакета
  */
 package kr.KR;
@@ -27,6 +27,11 @@ public class MainForm extends JFrame {
 	 */
 	static int n1=220,n2=380;
 	/**
+	 * Загрузка инконки для главной формы
+	 * 
+	 */
+	public static ImageIcon icon1 = new ImageIcon(MainForm.class.getResource("/main.png"));
+	/**
 	 * Метод, отвечающий за запуск фрейма
 	 * 
 	 */
@@ -37,7 +42,7 @@ public class MainForm extends JFrame {
 					MainForm frame = new MainForm();
 					frame.setVisible(true);
 	}
-	/**
+         /**
 	 * Объявление метода, в котором объявляются элементы экранной формы, ее события
 	 */
 	public MainForm() {
@@ -59,6 +64,11 @@ public class MainForm extends JFrame {
 		 */
 		Panel1.setBounds(50,15,500,650);
 		JPanel Panel2 = new JPanel();
+		/**
+		 * Устанавливаем иконку для главной формы
+		 * 
+		 */
+		setIconImage(icon1.getImage());
 		/**
 		 * Отключение автоматичского размещения компонентов на панели
 		 */
@@ -118,45 +128,3 @@ public class MainForm extends JFrame {
 		/**
 		 * Установка названия окна
 		 */
-		setTitle("Расчет номинала предохранителей в электрической цепи");
-		/**
-		 * Замена панели содержимого окна
-		 */
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setContentPane(contentPane);
-		setBounds(100, 100, 650, 280);
-		/**
-		 * Событие для кнопки "Для жилых помещений". 
-		 */
-		btnNewButton1.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				if (e.getActionCommand().equals("Для жилых помещений")) {
-					new ComponentForm();
-					/**
-					 * Меняем цвет кнокпи. 
-					 */
-					ComponentForm.btnNewButton.setBackground(Color.green);
-					ComponentForm.frame.setTitle("Для жилых помещений");
-					ComponentForm.TxtBox2.setText(String.valueOf(n1));
-				    }
-			
-			}
-		});
-		/**
-		 * Событие для кнопки "Для производственных помещений". 
-		 */
-		btnNewButton2.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				if (e.getActionCommand().equals("Для производственных помещений")) {
-					new ComponentForm();
-					/**
-					 * Меняем цвет кнокпи. 
-					 */
-					ComponentForm.btnNewButton.setBackground(Color.green);
-					ComponentForm.frame.setTitle("Для производственных помещений");
-					ComponentForm.TxtBox2.setText(String.valueOf(n2));
-				    }
-			}
-		});
-	}
-}
