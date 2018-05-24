@@ -1,4 +1,4 @@
-/**
+﻿/**
  * объявление пакета
  */
 package kr.KR;
@@ -91,10 +91,6 @@ public class ComponentForm extends JFrame {
 		 * Запрещаем масштабировать окно
 		 */
 		frame.setResizable(false);
-		/**
-		 * Добавляем иконку
-		 */
-		frame.setIconImage(MainForm.icon1.getImage());
 		/**
 		 * Обработчик событий для TxtBox1(поле для ввода максимальной мощности)
 		 */

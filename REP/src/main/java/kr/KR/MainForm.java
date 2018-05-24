@@ -60,11 +60,6 @@ public class MainForm extends JFrame {
 		Panel1.setBounds(50,15,500,650);
 		JPanel Panel2 = new JPanel();
 		/**
-		 * Устанавливаем иконку для главной формы
-		 * 
-		 */
-		setIconImage(icon1.getImage());
-		/**
 		 * Отключение автоматичского размещения компонентов на панели
 		 */
 		Panel2.setLayout(null);
