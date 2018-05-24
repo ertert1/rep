@@ -1,4 +1,4 @@
-/**
+﻿/**
  * объявление пакета
  */
 package kr.KR;
@@ -26,11 +26,6 @@ public class MainForm extends JFrame {
 	 * 
 	 */
 	static int n1=220,n2=380;
-	/**
-	 * Загрузка инконки для главной формы
-	 * 
-	 */
-	public static ImageIcon icon1 = new ImageIcon(MainForm.class.getResource("/main.png"));
 	/**
 	 * Метод, отвечающий за запуск фрейма
 	 * 
