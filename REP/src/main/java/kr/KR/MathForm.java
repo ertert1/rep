@@ -45,3 +45,22 @@ public void actionPerformed(ActionEvent e)  {
         	 * Считывание введенно максимальной мощности.
         	 */
 			k1=Float.parseFloat((ComponentForm.TxtBox1.getText( )));
+			/**
+			 * Считывание заранее заданного напряжения сети.
+			 */
+			r1=Float.parseFloat((ComponentForm.TxtBox2.getText( )));
+			/**
+			 * Вычисление напряжения в сети с помощью специальной функции расчёта.
+			 */
+			result=Calculation.sums(k1, r1);
+			/**
+			 * Вввод результатов на экранную форму.
+			 */
+			ComponentForm.label_3.setText(" Результат: " +  String.format("%.2f",result )+" Ампер ");
+        } 
+	}
+		catch(Exception ex) {
+			JOptionPane.showMessageDialog(new JFrame(),ex.getMessage(), "ОШИБКА",JOptionPane.ERROR_MESSAGE);
+    	}
+	}	
+}

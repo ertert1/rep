@@ -128,3 +128,45 @@ public class MainForm extends JFrame {
 		/**
 		 * Установка названия окна
 		 */
+		setTitle("Расчет номинала предохранителей в электрической цепи");
+		/**
+		 * Замена панели содержимого окна
+		 */
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setContentPane(contentPane);
+		setBounds(100, 100, 650, 280);
+		/**
+		 * Событие для кнопки "Для жилых помещений". 
+		 */
+		btnNewButton1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				if (e.getActionCommand().equals("Для жилых помещений")) {
+					new ComponentForm();
+					/**
+					 * Меняем цвет кнокпи. 
+					 */
+					ComponentForm.btnNewButton.setBackground(Color.green);
+					ComponentForm.frame.setTitle("Для жилых помещений");
+					ComponentForm.TxtBox2.setText(String.valueOf(n1));
+				    }
+			
+			}
+		});
+		/**
+		 * Событие для кнопки "Для производственных помещений". 
+		 */
+		btnNewButton2.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				if (e.getActionCommand().equals("Для производственных помещений")) {
+					new ComponentForm();
+					/**
+					 * Меняем цвет кнокпи. 
+					 */
+					ComponentForm.btnNewButton.setBackground(Color.green);
+					ComponentForm.frame.setTitle("Для производственных помещений");
+					ComponentForm.TxtBox2.setText(String.valueOf(n2));
+				    }
+			}
+		});
+	}
+}
