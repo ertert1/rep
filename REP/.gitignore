@@ -3,12 +3,9 @@
 .project
 .settings/
 bin/
-
-# Intellij
-.idea/
-*.iml
-*.iws
+resources/
 
 # Maven
 log/
 target/
+
