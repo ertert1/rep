@@ -31,7 +31,7 @@ public class MathForm implements ActionListener {
 	/**
 	 * Событие для кнопки "Рассчитать", присутствует обработка ошибок.
 	 */
-public void actionPerformed(ActionEvent e)  {
+	public void actionPerformed(ActionEvent e)  {
 		try {
 		/**
 		 * Создание объекта прослушивающего нажатие кнопок.

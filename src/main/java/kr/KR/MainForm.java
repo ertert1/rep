@@ -27,11 +27,6 @@ public class MainForm extends JFrame {
 	 */
 	static int n1=220,n2=380;
 	/**
-	 * Загрузка инконки для главной формы
-	 * 
-	 */
-	public static ImageIcon icon1 = new ImageIcon(MainForm.class.getResource("/main.png"));
-	/**
 	 * Метод, отвечающий за запуск фрейма
 	 * 
 	 */
@@ -42,12 +37,10 @@ public class MainForm extends JFrame {
 					MainForm frame = new MainForm();
 					frame.setVisible(true);
 	}
-         /**
+	/**
 	 * Объявление метода, в котором объявляются элементы экранной формы, ее события
 	 */
 	public MainForm() {
-		ImageIcon icon2 = new ImageIcon(MainForm.class.getResource("/home.png"));
-		ImageIcon icon3 = new ImageIcon(MainForm.class.getResource("/production.png"));
 		/**
 		 * Создание главной панели
 		 */
@@ -64,11 +57,6 @@ public class MainForm extends JFrame {
 		 */
 		Panel1.setBounds(50,15,500,650);
 		JPanel Panel2 = new JPanel();
-		/**
-		 * Устанавливаем иконку для главной формы
-		 * 
-		 */
-		setIconImage(icon1.getImage());
 		/**
 		 * Отключение автоматичского размещения компонентов на панели
 		 */
@@ -90,7 +78,6 @@ public class MainForm extends JFrame {
 		 * Задание шрифта для кнопки 
 		 */
 		btnNewButton1.setFont(font);
-		btnNewButton1.setIcon(icon2);
 		/**
 		 * указывает координаты верхней левой вершины кнопки, а также его ширину и высоту.
 		 */
@@ -103,7 +90,6 @@ public class MainForm extends JFrame {
 		 * Задание шрифта для кнопки 
 		 */
 		btnNewButton2.setFont(font);
-		btnNewButton2.setIcon(icon3);
 		/**
 		 * указывает координаты верхней левой вершины кнопки, а также его ширину и высоту.
 		 */

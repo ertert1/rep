@@ -7,6 +7,7 @@ package kr.KR;
  */
 import java.awt.Dimension;
 import java.awt.Font;
+import java.awt.GridLayout;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 import javax.swing.JButton;
@@ -29,7 +30,7 @@ public class ComponentForm extends JFrame {
 	static JLabel label_1;
 	static JLabel label_2;
 	static JLabel label_3;
-	static JTextField TxtBox1;
+	static JTextField TxtBox1; 
 	static JTextField TxtBox2;
 	public static JFrame frame;
 	static JButton btnNewButton;
@@ -63,26 +64,33 @@ public class ComponentForm extends JFrame {
 		btnNewButton=new JButton("Расчитать");
 		btnNewButton.setFont(font);
 		Panel1 = new JPanel();
-                /**
+		Panel1.setLayout(null);
+		/**
 		 * Добавляем кнопку, текстовые поля и метки на панель
 		 */
+		btnNewButton.setBounds(410, 50, 150, 35);
 		Panel1.add(label_1);
-		label_1.setBounds(50, 80, 350, 20);
+		label_1.setBounds(10, 20, 350, 20);
         Panel1.add(TxtBox1);
-        TxtBox1.setBounds(100, 200, 150, 100);
+        TxtBox1.setBounds(300, 20, 100, 30);
+        label_2.setBounds(10, 60, 350, 20);
         Panel1.add(label_2);
-        Panel1.add(TxtBox2);
-        TxtBox2.setBounds(50, 80, 350, 20);
-		TxtBox2.disable();
-        Panel1.add(btnNewButton);
-        btnNewButton.setBounds(50, 20, 140, 40);
+        label_3.setBounds(10, 100, 350, 20);
         Panel1.add(label_3);
+        Panel1.add(TxtBox2);
+        Panel1.add(btnNewButton);
+        TxtBox2.setBounds(300, 60, 100, 30);
+		TxtBox2.disable();
+		
+        
+        Panel1.add(label_3);
+        Panel1.setBounds(100, 200, 300, 200);
         /**
 		 * Помещаем панель на главный фрейм
 		 */
 		frame = new JFrame("Для жилых помещений");
 		frame.setContentPane(Panel1);
-		frame.setBounds(300,15,500,160);
+		frame.setBounds(30,15,600,200);
 		/**
 		 * Отображаем окно
 		 */
@@ -90,11 +98,7 @@ public class ComponentForm extends JFrame {
 		/**
 		 * Запрещаем масштабировать окно
 		 */
-		frame.setResizable(false);
-		/**
-		 * Добавляем иконку
-		 */ 
-                frame.setIconImage(MainForm.icon1.getImage());
+		//frame.setResizable(false);
 		/**
 		 * Обработчик событий для TxtBox1(поле для ввода максимальной мощности)
 		 */
