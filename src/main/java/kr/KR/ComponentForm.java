@@ -69,21 +69,18 @@ public class ComponentForm extends JFrame {
 		 * Добавляем кнопку, текстовые поля и метки на панель
 		 */
 		btnNewButton.setBounds(410, 50, 150, 35);
-		Panel1.add(label_1);
+		Panel1.add(btnNewButton);
 		label_1.setBounds(10, 20, 350, 20);
+		Panel1.add(label_1);
+		TxtBox1.setBounds(300, 20, 100, 30);
         Panel1.add(TxtBox1);
-        TxtBox1.setBounds(300, 20, 100, 30);
         label_2.setBounds(10, 60, 350, 20);
         Panel1.add(label_2);
         label_3.setBounds(10, 100, 350, 20);
         Panel1.add(label_3);
-        Panel1.add(TxtBox2);
-        Panel1.add(btnNewButton);
         TxtBox2.setBounds(300, 60, 100, 30);
+        Panel1.add(TxtBox2);
 		TxtBox2.disable();
-		
-        
-        Panel1.add(label_3);
         Panel1.setBounds(100, 200, 300, 200);
         /**
 		 * Помещаем панель на главный фрейм
@@ -98,7 +95,7 @@ public class ComponentForm extends JFrame {
 		/**
 		 * Запрещаем масштабировать окно
 		 */
-		//frame.setResizable(false);
+		frame.setResizable(false);
 		/**
 		 * Обработчик событий для TxtBox1(поле для ввода максимальной мощности)
 		 */
